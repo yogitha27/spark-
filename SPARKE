@@ -1,0 +1,104 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> local({fn<-choose.files(filters=Filters[c('R','txt','All'),],index=4)
++ file.show(fn,header=fn,title='')})
+> clear
+Error: object 'clear' not found
+> df<-read.table("data.txt",header=TRUE,sep=",")
+> print(df)
+   Country   asn                      timestamp Metric.A coserver  bytes
+1       de 31334 \t [07/Aug/2015:20:30:01 +0000]    76410      302    435
+2       pl 50231 \t [07/Aug/2015:20:30:01 +0000]   126746      200   7400
+3       gr  3329 \t [07/Aug/2015:20:30:01 +0000]   126474      206  17711
+4       tr  9121 \t [07/Aug/2015:20:30:02 +0000]    76406      200  19589
+5       se  3301  \t[08/Aug/2015:16:29:00 +0000]    76406      200  17960
+6       kz  9198  \t[08/Aug/2015:16:30:02 +0000]    76406      200   2403
+7       ch  6830  \t[08/Aug/2015:16:32:22 +0000]    76406      200  16099
+8       rs 21246  \t[09/Aug/2015:17:13:03 +0000]    76406      200  64127
+9       rs 21246  \t[09/Aug/2015:17:13:55 +0000]    76406      200  64704
+10      ro  9050 \t [09/Aug/2015:20:30:02 +0000]   126518      206 302932
+11      de  8447  \t[09/Aug/2015:20:35:13 +0000]    55510      200  33494
+12      de  3320   \t[09/Aug/2015:20:35:25 +0000    55510      200 603522
+13      de  3320  \t[10/Aug/2015:09:10:10 +0000]    55510      200  33526
+14      at  3320   \t[10/Aug/2015:09:19:12 +0000    55510      200 796672
+15      at  8447   \t[10/Aug/2015:09:19:12 +0000    55510      200  33528
+16      at  8447   \t[10/Aug/2015:09:19:12 +0000    55510      200  33528
+17      de  1901   \t[10/Aug/2015:09:19:12 +0000   126474      206  33535
+18      at  3320   \t[10/Aug/2015:09:19:12 +0000    55510      200 707542
+19      cz 12635   \t[10/Aug/2015:09:19:12 +0000   126700      206 460289
+20      de 15685   \t[10/Aug/2015:09:19:12 +0000   126518      206 120283
+   send.time
+1     0.3260
+2     0.0000
+3     0.0000
+4     0.0000
+5     0.0000
+6     0.0000
+7     0.0000
+8     0.0000
+9     0.0000
+10    0.5040
+11    0.0060
+12    2.8920
+13    0.0007
+14    2.1700
+15    0.0290
+16    0.0000
+17    0.0000
+18    0.4700
+19    0.6330
+20    0.0000
+> print(df)
+   Country   asn                      timestamp Metric.A coserver  bytes send.time
+1       de 31334 \t [07/Aug/2015:20:30:01 +0000]    76410      302    435    0.3260
+2       pl 50231 \t [07/Aug/2015:20:30:01 +0000]   126746      200   7400    0.0000
+3       gr  3329 \t [07/Aug/2015:20:30:01 +0000]   126474      206  17711    0.0000
+4       tr  9121 \t [07/Aug/2015:20:30:02 +0000]    76406      200  19589    0.0000
+5       se  3301  \t[08/Aug/2015:16:29:00 +0000]    76406      200  17960    0.0000
+6       kz  9198  \t[08/Aug/2015:16:30:02 +0000]    76406      200   2403    0.0000
+7       ch  6830  \t[08/Aug/2015:16:32:22 +0000]    76406      200  16099    0.0000
+8       rs 21246  \t[09/Aug/2015:17:13:03 +0000]    76406      200  64127    0.0000
+9       rs 21246  \t[09/Aug/2015:17:13:55 +0000]    76406      200  64704    0.0000
+10      ro  9050 \t [09/Aug/2015:20:30:02 +0000]   126518      206 302932    0.5040
+11      de  8447  \t[09/Aug/2015:20:35:13 +0000]    55510      200  33494    0.0060
+12      de  3320   \t[09/Aug/2015:20:35:25 +0000    55510      200 603522    2.8920
+13      de  3320  \t[10/Aug/2015:09:10:10 +0000]    55510      200  33526    0.0007
+14      at  3320   \t[10/Aug/2015:09:19:12 +0000    55510      200 796672    2.1700
+15      at  8447   \t[10/Aug/2015:09:19:12 +0000    55510      200  33528    0.0290
+16      at  8447   \t[10/Aug/2015:09:19:12 +0000    55510      200  33528    0.0000
+17      de  1901   \t[10/Aug/2015:09:19:12 +0000   126474      206  33535    0.0000
+18      at  3320   \t[10/Aug/2015:09:19:12 +0000    55510      200 707542    0.4700
+19      cz 12635   \t[10/Aug/2015:09:19:12 +0000   126700      206 460289    0.6330
+20      de 15685   \t[10/Aug/2015:09:19:12 +0000   126518      206 120283    0.0000
+> Tbytes=sum(df$bytes)
+> tbytes
+Error: object 'tbytes' not found
+> Tbytes
+[1] 3369279
+> Tsend.time=sum(df$send.time)
+> Tsend.time
+[1] 7.0307
+> throughput=Tbytes/Tsend.time
+> throughput
+[1] 479223.8
+> avgthroughput=throughput/20
+> avgthroughput
+[1] 23961.19
+> 
